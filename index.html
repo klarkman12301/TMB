@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tryin my Best</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+	<header>
+		<div id="logo"onclick="slowscroll('#top')">
+			<span>TMB Project</span>
+		</div>	
+			<div id="about" >
+		<a href="#" tittle="ability" onclick="slowscroll('#ability')">Ability</a>
+		<a href="#" tittle="abs" onclick="slowscroll('#abs')">Games</a>
+		<a href="#" tittle="aboutus" onclick="slowscroll('#aboutus')">About us</a>
+		<a href="https://www.instagram.com/tmb_project_/" tittle="Insta" onclick="slowscroll('#insta')">Instagram</a>
+		</div>
+		</header>
+
+		<div id="top">
+			<h1>TMB Project</h1>
+			<h3>Dreams come true</h3>
+		</div>
+
+		<div id="ability">
+			<div class="intro">
+				<h2>Join our team</h2>
+				<span>Create new worlds</span>
+			</div>
+			<div class="text">
+				<span>TMB is a Project created to create huge worlds for computer games. Fantasy, noar, Anime, realistic, space, horror worlds. Use your imagination on maximum, and Create the best world for you</span>
+			</div>
+		</div>
+
+		<div id="abs">
+			<h2>Our Projects</h2>
+			<h4></h4>
+			<div class="img">
+				<img src="https://cdn.cloudflare.steamstatic.com/steam/apps/570/header.jpg?t=1639608963" alt="">
+				<span>Dota 2</span>
+			</div>
+			<div class="img">
+				<img src="https://cdn.cloudflare.steamstatic.com/steam/apps/620/header.jpg?t=1610490805" alt="">
+				<span>Portal 2</span>
+			</div>
+			<div class="img">
+				<img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1644960/header.jpg?t=1642176426" alt="">
+				<span>NBA 2K22</span>
+			</div>
+			<div class="img">
+				<img src="https://cdn.cloudflare.steamstatic.com/steam/apps/730/header.jpg?t=1641233427" alt="">
+				<span>CS:Global Offensive</span>
+			</div>
+			<div id="contact">
+				<center><h5>back connect</h5></center>
+				<form id="form_input">
+					<label for="name">name <span>*</span></label><br>
+					<input type="text" placeholder="enter your name" name="name" id="name">
+					<label for="email">Ваша почта <span>*</span></label><br>
+					<input type="email" placeholder="Введите email" name="email" id="email"><br>
+					<label for="message">Сообщение <span>*</span></label><br>
+					<textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
+					<div id="mess_send" class="btn">Отправить</div>
+
+					
+				</form>
+			</div>
+
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			function slowscroll(id) {
+				$('html, body').animate({
+					scrollTop: $(id).offset().top
+				}, 500);
+			}
+			$(document).on("scroll", function (){
+				if($(window).scrollTop() === 0)
+					$("header").removeClass("fixed");
+				else
+					$("header").attr("class", "fixed");
+			});
+		</script>
+
+	
+
+</body>
+</html>
